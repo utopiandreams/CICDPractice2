@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://naejango-rds.c3ekmastaz0y.ap-northeast-2.rds.amazonaws.com:5432/naejango_db?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: master
+    password: naejango!!11
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.spatial.dialect.postgis.PostgisPG95Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        highlight_sql: true
+        dialect: org.hibernate.spatial.dialect.postgis.PostgisPG95Dialect
