@@ -63,6 +63,10 @@ jobs:
         run: |
           aws ec2 authorize-security-group-ingress --group-name ${{ env.SECURITY_GROUP_NAME }} --protocol tcp --port 5432 --cidr ${{ steps.ip.outputs.ipv4 }}/32 
 
+      - uses: harmon758/postgresql-action@v1
+        with:
+          postgresql version: '14'
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
