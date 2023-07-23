@@ -35,7 +35,7 @@ public class Storage implements Serializable {
     @Column(nullable = false)
     private String address;
 
-    @Column(columnDefinition = "POINT")
+    @Column(columnDefinition = "geometry(point, 4326)")
     private Point location;
 
     @ManyToOne(fetch = FetchType.LAZY)
